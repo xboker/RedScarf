@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vNY-RV-1Kc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Find View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FindViewController" id="BYZ-38-t0r" customClass="FindViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-Jt-XoC">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ovN-L1-RYc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tLM-8o-EuE"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0q-Lc-ab0">
+                                <rect key="frame" x="0.0" y="459" width="320" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xOv-a5-2RL"/>
+                                </constraints>
+                                <items/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u0q-Lc-ab0" secondAttribute="trailing" id="1km-yV-N4Q"/>
+                            <constraint firstAttribute="trailing" secondItem="h5P-Jt-XoC" secondAttribute="trailing" id="2kV-2d-4ub"/>
+                            <constraint firstItem="h5P-Jt-XoC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I2w-K2-3Vk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h5P-Jt-XoC" secondAttribute="bottom" id="LiT-cb-a4N"/>
+                            <constraint firstItem="h5P-Jt-XoC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WiL-xP-PTm"/>
+                            <constraint firstItem="u0q-Lc-ab0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="efB-mi-hPI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u0q-Lc-ab0" secondAttribute="bottom" id="uIB-8a-bhc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JKE-PH-UvK"/>
+                    <connections>
+                        <outlet property="tableView" destination="h5P-Jt-XoC" id="Xzg-q5-SrN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-161"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Jp-Ve-QKL">
+            <objects>
+                <tabBarController id="vNY-RV-1Kc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SWE-AH-rHI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="59l-9r-kWe" kind="relationship" relationship="viewControllers" id="6l6-64-0ut"/>
+                        <segue destination="gUf-2r-RF6" kind="relationship" relationship="viewControllers" id="zry-2i-cqx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfo-vp-9Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-331" y="274"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="Wo6-mW-hTm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="59l-9r-kWe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="首页_未选中" selectedImage="首页_选中" id="XEe-H6-87a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Q1y-b6-8kC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="duO-Nk-IY8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sI-cB-oTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-161"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="ROs-RS-ngq">
+            <objects>
+                <viewController storyboardIdentifier="MyViewController" id="LOj-Wu-Y4m" customClass="MyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OHZ-qA-trz"/>
+                        <viewControllerLayoutGuide type="bottom" id="0qr-9U-AHT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V6V-Ix-1lh">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kOl-b4-L45"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCG-p2-I7I" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="672"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="Bfv-NL-Kac">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gUf-2r-RF6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="我的_未选中" selectedImage="我的_选中" id="Cut-3e-wvE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="VWe-sk-rng">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LOj-Wu-Y4m" kind="relationship" relationship="rootViewController" id="Y3p-PS-pwh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCE-3Z-zNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="663"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="我的_未选中" width="22" height="22"/>
+        <image name="我的_选中" width="22" height="22"/>
+        <image name="首页_未选中" width="22" height="22"/>
+        <image name="首页_选中" width="22" height="22"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
